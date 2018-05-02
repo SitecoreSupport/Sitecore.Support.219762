@@ -52,6 +52,11 @@
             continue;
           }
 
+          if (field.Type.Equals("Password", System.StringComparison.OrdinalIgnoreCase) && string.IsNullOrEmpty(saveField.Value))
+          {
+            continue;
+          }
+
           saveField.OriginalValue = field.Value;
 
           if (saveField.OriginalValue == saveField.Value)
