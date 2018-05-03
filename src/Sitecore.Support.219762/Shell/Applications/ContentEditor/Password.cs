@@ -11,7 +11,7 @@
 
       try
       {
-        valueLen = base.Attributes["value"].Length;
+        valueLen = base.Attributes["value"] == null ? 0 : base.Attributes["value"].Length;
       }
       catch
       {
